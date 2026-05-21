@@ -1,4 +1,9 @@
-# 💤 LazyVim
+# 💤 LazyVim - Configuration for Salesforce development
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## Requirements
+*I don't know if they are all mandatory, whatever*
+- ripgrep
+- nvim-treesitter
+- fzf
+- universal-ctags
+- jsongrep

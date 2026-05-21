@@ -13,3 +13,11 @@ end, { desc = "Deploy this file from org" })
 map("n", "<leader>id", function()
     require("sf").diff_in_org()
 end, { desc = "Deploy this file from org" })
+
+map("n", "<leader>it", function()
+    require("sf").run_all_tests_in_this_file_with_coverage()
+end, { desc = "Run tests in this file" })
+
+map("n", "<leader>ir", function()
+    require("sf").run_anonymous()
+end, { desc = "Run this buffer anonymous" })

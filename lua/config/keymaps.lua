@@ -12,7 +12,7 @@ end, { desc = "Deploy this file from org" })
 
 map("n", "<leader>id", function()
     require("sf").diff_in_org()
-end, { desc = "Deploy this file from org" })
+end, { desc = "Diff file against org" })
 
 map("n", "<leader>it", function()
     require("sf").run_all_tests_in_this_file_with_coverage()
@@ -21,3 +21,11 @@ end, { desc = "Run tests in this file" })
 map("n", "<leader>ir", function()
     require("sf").run_anonymous()
 end, { desc = "Run this buffer anonymous" })
+
+map("n", "<leader>il", function()
+    require("sf").pull_log()
+end, { desc = "Pull logs from org" })
+
+map("n", "<leader>iL", function()
+    require("apex-log-analyzer").generate_tree()()
+end, { desc = "Show log tree" })

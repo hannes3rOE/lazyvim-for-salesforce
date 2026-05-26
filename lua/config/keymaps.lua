@@ -29,3 +29,7 @@ end, { desc = "Pull logs from org" })
 map("n", "<leader>iL", function()
     require("apex-log-analyzer").generate_tree()()
 end, { desc = "Show log tree" })
+
+map("n", "<leader>o", function()
+    require("overseer").toggle()
+end, { desc = "Show log tree" })

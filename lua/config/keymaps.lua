@@ -27,9 +27,22 @@ map("n", "<leader>il", function()
 end, { desc = "Pull logs from org" })
 
 map("n", "<leader>iL", function()
-    require("apex-log-analyzer").generate_tree()()
+    local log_path = vim.api.nvim_buf_get_name(0)
+    require("apex-log-analyzer").generate_tree(log_path)
 end, { desc = "Show log tree" })
 
 map("n", "<leader>o", function()
     require("overseer").toggle()
 end, { desc = "Show log tree" })
+
+map("n", "<leader>ic", function()
+    require("apex-coverage").get_coverage()
+end, { desc = "Show code coverage" })
+
+map("n", "<leader>iC", function()
+    require("apex-coverage").clean_coverage()
+end, { desc = "Clean code coverage" })
+
+map("t", "<C-Space>", "<C-\\><C-n><C-w>w", { desc = "Exit terminal" })
+
+map("n", "<C-Space>", "<C-w>w", { desc = "Focus next window" })

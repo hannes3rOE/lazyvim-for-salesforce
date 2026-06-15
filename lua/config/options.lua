@@ -5,3 +5,4 @@ vim.opt.tabstop = 4 -- width of a tab character
 vim.opt.shiftwidth = 4 -- indent size for >> and auto-indent
 vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.softtabstop = 4 -- spaces inserted when pressing Tab
+vim.g.autoformat = false

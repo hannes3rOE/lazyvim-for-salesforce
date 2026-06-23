@@ -6,6 +6,10 @@ map("n", "<leader>ig", function()
     require("sf").retrieve("-c")
 end, { desc = "Retrieve this file from org" })
 
+map("n", "<leader>iG", function()
+    require("sf").list_md_to_retrieve()
+end, { desc = "Retrieve metadata from Org..." })
+
 map("n", "<leader>ip", function()
     require("sf").save_and_push("-c")
 end, { desc = "Deploy this file from org" })
@@ -25,6 +29,10 @@ end, { desc = "Run this buffer anonymous" })
 map("n", "<leader>il", function()
     require("sf").pull_log()
 end, { desc = "Pull logs from org" })
+
+map("n", "<leader>io", function()
+    require("sf").set_global_target_org()
+end, { desc = "Set Global Target Org..." })
 
 map("n", "<leader>iL", function()
     local log_path = vim.api.nvim_buf_get_name(0)
